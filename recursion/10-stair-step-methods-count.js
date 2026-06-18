@@ -1,10 +1,10 @@
-let findStep=(n)=>{
+let findStepMethods=(n)=>{
     if(n==1 ) return 1
     if(n==2 ) return 2
-    return findStep(n-1)+findStep(n-2)
+    return findStepMethods(n-1)+findStepMethods(n-2)
 }
 
-let steps = findStep(2)
+let steps = findStepMethods(2)
 console.log(steps)
 
 
@@ -16,12 +16,12 @@ console.log(steps)
 // ========================================
 
 
-// let findStep=(n)=>{
+// let findStepMethods=(n)=>{
 //         if(n==0 ) return 1
 
 //     if(n<0) return 0
-//     return findStep(n-1)+findStep(n-2)+findStep(n-3)
+//     return findStepMethods(n-1)+findStepMethods(n-2)+findStepMethods(n-3)
 // }
 
-// let steps = findStep(4)
+// let steps = findStepMethods(4)
 // console.log(steps)
