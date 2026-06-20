@@ -13,4 +13,4 @@ let PreInPost = (n) => {
   return;
 };
 
-PreInPost(4);
+PreInPost(3);
