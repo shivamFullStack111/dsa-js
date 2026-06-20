@@ -9,4 +9,4 @@ function fibonacci(n) {
   return fibonacci(n - 1) + fibonacci(n - 2);
 }
 
-console.log(fibonacci(-1)); // Output: 13
+console.log(fibonacci(7)); // Output: 13
