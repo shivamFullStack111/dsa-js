@@ -1,11 +1,11 @@
-let findStepMethods=(n)=>{
-    if(n==1 ) return 1
-    if(n==2 ) return 2
-    return findStepMethods(n-1)+findStepMethods(n-2)
+let stairMethods =(n)=>{
+    if(n==1) return 1
+    if(n==2) return 2 
+    
+    return stairMethods(n-1)+stairMethods(n-2)
 }
 
-let steps = findStepMethods(2)
-console.log(steps)
+console.log(stairMethods(3))
 
 
 

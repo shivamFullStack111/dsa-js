@@ -1,17 +1,19 @@
-let pow = 5;
+let pow = (n, p) => {
+  if (p == 1) return n;
 
-let powerLog = (n, pow) => {
-  if (pow <= 0) return 1;
-  if (pow == 1) return n;
+  let half = Math.trunc(p / 2); // Half of the power like 4/2 => 2            but if the power is odd then remove decimal value
 
-  let x = powerLog(n, Math.trunc(pow / 2));
+  let halfPow = pow(n, half);
 
-  if (pow % 2 == 0) {
-    return x * x;
+  if (p % 2 == 0) {
+    return halfPow * halfPow;
   } else {
-    return x * x * n;
+    return halfPow * halfPow * n;
   }
 };
 
-let ans = powerLog(-2, 5);
-console.log(ans);
+console.log(pow(2, 5));
+
+// 2 rp 8 => 2 rp 4 * 2 rp 4
+// 2 rp 4 => 2 rp 2 * 2 rp 2
+// 2 rp 2 => 2 rp 1 * 2 rp 1
