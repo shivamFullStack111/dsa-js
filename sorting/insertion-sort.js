@@ -7,13 +7,11 @@ let swap = (arr,i, j) => {
 };
 
 for (let i = 1; i < arr.length; i++) {
-  for (let j = i; j < arr.length; j++) {
     let current = i
     while( current>0 && arr[current-1]>arr[current] ){
         swap(arr,current,current-1)
         current--
     }
-  }
 }
 
 console.log(arr)
